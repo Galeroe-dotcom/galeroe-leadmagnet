@@ -1,0 +1,155 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+  .page { max-width: 640px; margin: 0 auto; padding: 2rem 1rem; }
+  .tag { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #2B2EA8; background: #EEEEFF; padding: 5px 12px; border-radius: 20px; margin-bottom: 1.25rem; }
+  .hero-title { font-size: 28px; font-weight: 500; line-height: 1.25; color: var(--color-text-primary); margin-bottom: 0.75rem; }
+  .hero-title span { color: #2B2EA8; }
+  .hero-sub { font-size: 15px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.75rem; }
+  .collab-bar { display: flex; align-items: center; gap: 10px; padding: 10px 14px; border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-md); background: var(--color-background-secondary); margin-bottom: 2rem; font-size: 13px; color: var(--color-text-secondary); }
+  .collab-dot { width: 8px; height: 8px; border-radius: 50%; background: #2B2EA8; flex-shrink: 0; }
+  .collab-bar strong { color: var(--color-text-primary); }
+  .content-preview { border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); overflow: hidden; margin-bottom: 2rem; }
+  .preview-header { background: #2B2EA8; padding: 1rem 1.25rem; }
+  .preview-header p { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+  .preview-header h2 { font-size: 16px; font-weight: 500; color: #fff; }
+  .preview-body { background: var(--color-background-primary); }
+  .tip-item { display: flex; gap: 14px; align-items: flex-start; padding: 1rem 1.25rem; border-bottom: 0.5px solid var(--color-border-tertiary); }
+  .tip-item:last-child { border-bottom: none; }
+  .tip-num { width: 28px; height: 28px; border-radius: 50%; background: #EEEEFF; color: #2B2EA8; font-size: 12px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .tip-text h3 { font-size: 14px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 3px; }
+  .tip-text p { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+  .blur-row { display: flex; gap: 14px; align-items: flex-start; padding: 1rem 1.25rem; filter: blur(4px); pointer-events: none; opacity: 0.5; }
+  .blur-row .tip-num { background: var(--color-background-secondary); }
+  .blur-line { height: 13px; border-radius: 4px; background: var(--color-background-secondary); }
+  .gate { padding: 1.25rem; border-top: 0.5px solid var(--color-border-tertiary); background: var(--color-background-secondary); }
+  .gate p { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 0.75rem; text-align: center; }
+  .gate p strong { color: var(--color-text-primary); }
+  .input-row { display: flex; gap: 8px; }
+  .input-row input { flex: 1; font-size: 14px; padding: 9px 12px; border: 0.5px solid var(--color-border-secondary); border-radius: var(--border-radius-md); background: var(--color-background-primary); color: var(--color-text-primary); outline: none; }
+  .input-row input:focus { border-color: #2B2EA8; box-shadow: 0 0 0 2px rgba(43,46,168,0.15); }
+  .btn { background: #2B2EA8; color: #fff; border: none; border-radius: var(--border-radius-md); padding: 9px 18px; font-size: 14px; font-weight: 500; cursor: pointer; white-space: nowrap; transition: opacity 0.15s; }
+  .btn:hover { opacity: 0.88; }
+  .success-box { display: none; text-align: center; padding: 1.25rem; }
+  .success-box .check { width: 40px; height: 40px; border-radius: 50%; background: #EEEEFF; display: flex; align-items: center; justify-content: center; margin: 0 auto 0.75rem; }
+  .success-box h3 { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin-bottom: 4px; }
+  .success-box p { font-size: 13px; color: var(--color-text-secondary); }
+  .footer-logos { display: flex; align-items: center; justify-content: center; gap: 12px; margin-top: 2rem; font-size: 12px; color: var(--color-text-secondary); }
+  .logo-pill { font-size: 11px; font-weight: 500; letter-spacing: 0.06em; padding: 4px 10px; border-radius: 20px; border: 0.5px solid var(--color-border-tertiary); color: var(--color-text-secondary); }
+  .x-mark { color: var(--color-text-secondary); font-size: 11px; }
+</style>
+
+<div class="page">
+  <div class="tag"><i class="ti ti-bolt" aria-hidden="true"></i> Free guide · Business Thursdays</div>
+
+  <h1 class="hero-title">Train your week like an <span>athlete</span> — perform like a CEO</h1>
+  <p class="hero-sub">The same habits elite runners use to win races are what top young professionals use to win in business. Here are 7 you can start this week.</p>
+
+  <div class="collab-bar">
+    <div class="collab-dot"></div>
+    <span>A collaboration between <strong>Galeroe</strong> and our running club partners — built for driven young professionals in Joburg.</span>
+  </div>
+
+  <div class="content-preview">
+    <div class="preview-header">
+      <p>Inside this guide</p>
+      <h2>7 athlete habits for young professionals</h2>
+    </div>
+    <div class="preview-body" id="tips-body">
+      <div class="tip-item">
+        <div class="tip-num">1</div>
+        <div class="tip-text">
+          <h3>The morning non-negotiable</h3>
+          <p>Elite runners protect the first 45 minutes of their day. CEOs do too. Here's the exact routine structure that separates top performers.</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-num">2</div>
+        <div class="tip-text">
+          <h3>Train in zones, work in zones</h3>
+          <p>Runners use heart-rate zones to avoid burnout. Professionals who use deep work blocks the same way outperform their peers by 40%.</p>
+        </div>
+      </div>
+      <div class="tip-item">
+        <div class="tip-num">3</div>
+        <div class="tip-text">
+          <h3>Recovery is a strategy, not a weakness</h3>
+          <p>The best runners know rest is where the gains happen. The best professionals have figured out the same thing about their output.</p>
+        </div>
+      </div>
+
+      <div class="blur-row">
+        <div class="tip-num">4</div>
+        <div class="tip-text">
+          <div class="blur-line" style="width: 60%; margin-bottom: 6px;"></div>
+          <div class="blur-line" style="width: 90%;"></div>
+          <div class="blur-line" style="width: 75%; margin-top: 4px;"></div>
+        </div>
+      </div>
+      <div class="blur-row" style="padding-top:0">
+        <div class="tip-num">5</div>
+        <div class="tip-text">
+          <div class="blur-line" style="width: 50%; margin-bottom: 6px;"></div>
+          <div class="blur-line" style="width: 85%;"></div>
+        </div>
+      </div>
+
+      <div class="gate" id="gate-section">
+        <p><strong>Habits 4–7 are free</strong> — drop your email to unlock the full guide and join Business Thursdays.</p>
+        <div class="input-row">
+          <input type="email" id="email-input" placeholder="your@email.com" />
+          <button class="btn" onclick="handleSubmit()">Unlock guide</button>
+        </div>
+      </div>
+
+      <div class="success-box" id="success-section">
+        <div class="check"><i class="ti ti-check" style="font-size:18px; color:#2B2EA8;" aria-hidden="true"></i></div>
+        <h3>You're in — check your inbox!</h3>
+        <p>The full guide + this Thursday's Business Thursdays newsletter is on its way to you.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-logos">
+    <span class="logo-pill">GALEROE</span>
+    <span class="x-mark">×</span>
+    <span class="logo-pill">RUNNING CLUB</span>
+    <span style="margin-left: 4px;">· Business Thursdays newsletter</span>
+  </div>
+</div>
+
+<script>
+function handleSubmit() {
+  const input = document.getElementById('email-input');
+  const val = input.value.trim();
+  if (!val || !val.includes('@')) {
+    input.style.borderColor = '#E24B4A';
+    input.focus();
+    return;
+  }
+  document.getElementById('gate-section').style.display = 'none';
+  document.getElementById('success-section').style.display = 'block';
+
+  const blurRows = document.querySelectorAll('.blur-row');
+  blurRows.forEach(row => {
+    row.style.filter = 'none';
+    row.style.opacity = '1';
+    row.style.pointerEvents = 'auto';
+  });
+
+  const tips = [
+    { num: '4', title: 'Run with people better than you', body: 'The fastest way to improve your pace is to run with faster runners. The fastest way to grow in business is the same — proximity to people who are ahead of you.' },
+    { num: '5', title: 'Track what you measure', body: 'Runners obsess over splits, cadence, and VO2 max. High-performing professionals track revenue, conversion rates, and time spent. What you measure, you improve.' },
+    { num: '6', title: 'Taper before the big moment', body: 'Runners reduce load before race day to peak at the right time. Learn to reduce decision fatigue before your most important meetings and pitches.' },
+    { num: '7', title: 'The community multiplier', body: 'Solo runners plateau. Runners in clubs go further, faster. Build your professional community the same way — Galeroe exists exactly for this.' },
+  ];
+
+  blurRows.forEach((row, i) => {
+    if (tips[i]) {
+      row.className = 'tip-item';
+      row.innerHTML = `<div class="tip-num">${tips[i].num}</div><div class="tip-text"><h3>${tips[i].title}</h3><p>${tips[i].body}</p></div>`;
+    }
+  });
+}
+</script>
